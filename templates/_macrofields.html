@@ -1,0 +1,7 @@
+{% macro render_field(campo) %}
+{{ campo.label }}
+{{ campo(**kwargs)|safe }}
+{% for err in campo.errors %}
+<span style='color: crimson;'>{{ err }}</span>
+{% endfor %}
+{% endmacro %}
